@@ -1,0 +1,42 @@
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  /* border: 1px solid #efefef; */
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-height: 60vh; /* Set maximum height */
+  overflow-y: auto; /* Add vertical scrollbar if content exceeds max height */
+}
+
+.product-box-contain img {
+  width: 50px;
+  height: 40px;
+}
+
+.search-item {
+  width: 100%;
+  /* Adjust the width as needed */
+}
+
+.onhover-div {
+  background-color: #fff;
+  border-bottom: 1px solid #efefef;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.drop-cart {
+  display: inline-flex;
+}
+
+.drop-contain a {
+  color: #222;
+}
+
+.drop-contain h5 {
+  font-size: calc(13px + (16 - 15) * ((100vw - 320px) / (1920 - 320)))
+}

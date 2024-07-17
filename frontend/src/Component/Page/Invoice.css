@@ -1,0 +1,74 @@
+.card {
+    /* box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%); */
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, .125);
+    border-radius: 1rem;
+}
+
+.card-container-outer {
+    background-color: #f1f1f1;
+    /* padding: 50px 30px; */
+}
+
+.card-container-outer .card-body {
+    padding: 10px 10px;
+}
+
+.invoice-title h4 {
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.text-muted p {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.card-address-sec {
+    font-size: 14px;
+    color: #000;
+    text-align: right;
+}
+
+.card-address-sec h5 {
+    font-size: 14px;
+    color: #000;
+    text-align: right;
+    font-weight: 700;
+}
+
+.card-Invoice-sec {
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+}
+
+.card-Invoice-sec h5 {
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+}
+
+.card-sold-sec {
+    font-size: 14px;
+    color: #000;
+    text-align: left;
+}
+
+.card-sold-sec h5 {
+    font-size: 14px;
+    color: #000;
+    font-weight: 700;
+}

@@ -1,0 +1,55 @@
+/* SliderComponent.css */
+.slider-wrapper {
+  position: relative;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+
+  bottom: 28px;
+  background-color: #fff;
+  border: 2px solid #f1f1f1;
+  padding: 3px 16px;
+  cursor: pointer;
+}
+
+.tabs button {
+  width: 220px;
+  height: 45px;
+  color: #222;
+}
+
+.tab.active {
+  /* //background-color: #ff5a34; */
+  border-bottom: 2px solid #ff5a34;
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+@media (max-width: 720px) {
+  .tab {
+    display: none !important;
+  }
+}
