@@ -27,6 +27,7 @@ import Questionanswer from "./Component/Page/Questionanswer";
 import Invoice from "./Component/Page/Invoice"; // Import the Invoice component
 import OtpForgotPassword from "./Component/Page/OtpForgotPassword";
 import ScrollToTopOnPageChange from "./Component/Page/ScrollToTopOnPageChange";
+import FAQ from "./Component/Page/FAQ";
 
 const App = () => {
   return (
@@ -58,6 +59,7 @@ const AppContent = () => {
         <Route path="/SuccessPage" element={<SuccessPage />} />
         <Route path="/Shippingpolicy" element={<Shippingpolicy />} />
         <Route path="/Wishlist" element={<Wishlist />} />
+        <Route path="/FAQ" element={<FAQ />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/Checkout" element={<Checkout />} />
         <Route path="/Blog" element={<Blog />} />

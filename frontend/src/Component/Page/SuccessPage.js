@@ -5,8 +5,8 @@ import { useSearchParams } from 'react-router-dom'
 
 
 
-const cardClass = "bg-zinc-50 p-8 rounded-lg";
-const titleClass = "text-2xl font-bold mb-4 text-[#76c603]";
+const cardClass = "bg-zinc-50 p-8 rounded-lg mt-4";
+const titleClass = "text-2xl font-bold mb-2";
 const textClass = "text-lg mb-4";
 const imgClass = "mx-auto mb-4";
 
@@ -82,7 +82,7 @@ export default function SuccessPage() {
                   <h6>Transaction ID: {referenceNum}</h6>
                 </div>
                 <div className={cardClass}>
-                  <h2 className={titleClass}>Thank You for Your Order!</h2>
+                  <h2 className={titleClass} style={{ color: "#76c603" }}>Thank You for Your Order!</h2>
                   <p className={textClass}>We appreciate your purchase. Your order is confirmed and will be shipped shortly.</p>
                   <img src="https://openui.fly.dev/openui/400x200.svg?text=🛍" alt="shopping-bag" className={imgClass} />
                   <p className={textClass}>For any inquiries, please contact our support team.</p>

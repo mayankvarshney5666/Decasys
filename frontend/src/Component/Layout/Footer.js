@@ -191,7 +191,7 @@ export default function Footer() {
                       </Link>
                     </li>
                     <li>
-                      <a href="" className="text-content">
+                      <a href="/FAQ" className="text-content">
                         FAQ
                       </a>
                     </li>
