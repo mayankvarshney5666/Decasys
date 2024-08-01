@@ -137,9 +137,9 @@ export default function Checkout() {
       amount: aftercoupanprise,
       user_id: localStorage.getItem('user_id'),
       session_id: localStorage.getItem('session_id'),
-      coupanAmount:couponprice,
+      coupanAmount: couponprice,
     };
-    const { data: { key } } = await axios.get("https://www.backend.decasys.in/api/getkey")
+    const { data: { key } } = await axios.get(`${apiUrl}/api/getkey`)
     // const { data: { key } } = await axios.get("http://localhost:4000/api/getkey")
     const { data: { order } } = await axios.post(`${apiUrl}/checkout`, newData)
     // const { data: { order } } = await axios.post(`http://localhost:4000/api/v1/checkout`, newData)

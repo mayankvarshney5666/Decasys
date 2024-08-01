@@ -172,7 +172,7 @@ export default function CategoryProduct() {
 
                       return (<div>
                         <div className={`product-box-3 h-100 wow fadeInUp`}>
-                        <div className="product-wish-icon">
+                          <div className="product-wish-icon">
                             <a href="javascript:void(0);">
                               <span onClick={() => addtowishlist(products?._id)} className="notifi-wishlist">
                                 {/* <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -220,9 +220,9 @@ export default function CategoryProduct() {
                               <div className="product-rating mt-2">
                                 {
                                   Number.isInteger(products?.averageRating) ? (
-                                    <span style={{fontSize:14}}>({products?.averageRating}.0)</span>
+                                    <span style={{ fontSize: 14 }}>({products?.averageRating}.0)</span>
                                   ) : (
-                                    <span style={{fontSize:14}}>({products?.averageRating})</span>
+                                    <span style={{ fontSize: 14 }}>({products?.averageRating})</span>
                                   )
                                 }
                                 <ul className="rating">
@@ -231,7 +231,7 @@ export default function CategoryProduct() {
 
                                 </ul>
 
-                                <span class="review" style={{fontSize:14, marginLeft:5}}>({products?.totalReviews})</span>
+                                <span class="review" style={{ fontSize: 14, marginLeft: 5 }}>({products?.totalReviews})</span>
                               </div>
                               {/* <h6 className="unit">454 g</h6> */}
                               <h5 className="price">
@@ -275,7 +275,7 @@ export default function CategoryProduct() {
                       const isProductInWishlist = Wishlist.some(item => item.productid === products?._id);
                       return (<div>
                         <div className="product-box-3 h-100 wow fadeInUp">
-                        <div className="product-wish-icon">
+                          <div className="product-wish-icon">
                             <a href="javascript:void(0);">
                               <span onClick={() => addtowishlist(products?._id)} className="notifi-wishlist">
                                 {/* <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -320,13 +320,13 @@ export default function CategoryProduct() {
                                 <Link to={`/ProductDetails/${products?._id}`}>
                                   <h5 className="name">{products?.name}</h5>
                                 </Link>
-                                </div>
+                              </div>
                               <div className="product-rating mt-2">
                                 {
                                   Number.isInteger(products?.averageRating) ? (
-                                    <span style={{fontSize:14}}>({products?.averageRating}.0)</span>
+                                    <span style={{ fontSize: 14 }}>({products?.averageRating}.0)</span>
                                   ) : (
-                                    <span style={{fontSize:14}}>({products?.averageRating})</span>
+                                    <span style={{ fontSize: 14 }}>({products?.averageRating})</span>
                                   )
                                 }
                                 <ul className="rating">
@@ -334,7 +334,7 @@ export default function CategoryProduct() {
 
                                 </ul>
 
-                                <span class="review" style={{fontSize:14, marginLeft:5}}>({products?.totalReviews})</span>
+                                <span class="review" style={{ fontSize: 14, marginLeft: 5 }}>({products?.totalReviews})</span>
                               </div>
                               {/* <h6 className="unit">454 g</h6> */}
                               <h5 className="price">
@@ -457,15 +457,15 @@ export default function CategoryProduct() {
                               <div className="product-rating mt-2">
                                 {
                                   Number.isInteger(products?.averageRating) ? (
-                                    <span style={{fontSize:14}}>({products?.averageRating}.0)</span>
+                                    <span style={{ fontSize: 14 }}>({products?.averageRating}.0)</span>
                                   ) : (
-                                    <span style={{fontSize:14}}>({products?.averageRating})</span>
+                                    <span style={{ fontSize: 14 }}>({products?.averageRating})</span>
                                   )
                                 }
                                 <ul className="rating">
                                   <Rating rating={products?.averageRating} />
                                 </ul>
-                                <span class="review" style={{fontSize:14, marginLeft: 5}}>({products?.totalReviews})</span>
+                                <span class="review" style={{ fontSize: 14, marginLeft: 5 }}>({products?.totalReviews})</span>
                               </div>
                               {/* <h6 className="unit">454 g</h6> */}
                               <h5 className="price">
@@ -509,7 +509,7 @@ export default function CategoryProduct() {
                       const isProductInWishlist = Wishlist.some(item => item.productid === products?._id);
                       return (<div>
                         <div className="product-box-3 h-100 wow fadeInUp">
-                        <div className="product-wish-icon">
+                          <div className="product-wish-icon">
                             <a href="javascript:void(0);">
                               <span onClick={() => addtowishlist(products?._id)} className="notifi-wishlist">
                                 {/* <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -554,21 +554,21 @@ export default function CategoryProduct() {
                                 <Link to={`/ProductDetails/${products?._id}`}>
                                   <h5 className="name">{products?.name}</h5>
                                 </Link>
-                                </div>
+                              </div>
                               <div className="product-rating mt-2">
 
                                 {
                                   Number.isInteger(products?.averageRating) ? (
-                                    <span style={{fontSize:14}}>({products?.averageRating}.0)</span>
+                                    <span style={{ fontSize: 14 }}>({products?.averageRating}.0)</span>
                                   ) : (
-                                    <span style={{fontSize:14}}>({products?.averageRating})</span>
+                                    <span style={{ fontSize: 14 }}>({products?.averageRating})</span>
                                   )
                                 }
                                 <ul className="rating">
                                   <Rating rating={products?.averageRating} />
 
                                 </ul>
-                                <span class="review" style={{fontSize:14, marginLeft: 5}}>({products?.totalReviews})</span>
+                                <span class="review" style={{ fontSize: 14, marginLeft: 5 }}>({products?.totalReviews})</span>
                               </div>
                               {/* <h6 className="unit">454 g</h6> */}
                               <h5 className="price">
@@ -611,7 +611,7 @@ export default function CategoryProduct() {
             <div className="col-lg-12 col-sm-12 col-12">
               <div className="banner-contain-3 pt-lg-4 h-100 hover-effect">
                 <a href="javascript:void(0)">
-                  <img src="https://www.backend.decasys.in/1711601185734-Cealtic salt post Desktop.png" className="img-fluid social-image blur-up w-100 lazyloaded" alt />
+                  <img src="https://www.app.decasys.in/1711601185734-Cealtic%20salt%20post%20Desktop.jpeg" className="img-fluid social-image blur-up w-100 lazyloaded" alt />
                 </a>
               </div>
             </div>

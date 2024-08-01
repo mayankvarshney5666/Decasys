@@ -1,10 +1,10 @@
 import { createSlice, createAsyncThunk, isRejectedWithValue } from "@reduxjs/toolkit";
 const apiUrl = process.env.REACT_APP_API_URL;
 export const addCart = createAsyncThunk("addCart", async (data, { rejectWithValue }) => {
-    const responce = await fetch(`https://www.backend.decasys.in/api/v1/addCart/`, {
+    const responce = await fetch(`${apiUrl}/addCart/`, {
         method: "POST",
         headers: {
-            "Content-Type": "application/json", 
+            "Content-Type": "application/json",
         },
         body: JSON.stringify(data)
     })
@@ -17,7 +17,7 @@ export const addCart = createAsyncThunk("addCart", async (data, { rejectWithValu
 });
 
 export const addCartDecreaseQuantity = createAsyncThunk("addCartDecreaseQuantity", async (data, { rejectWithValue }) => {
-    const responce = await fetch(`https://www.backend.decasys.in/api/v1/addCartDecreaseQuantity/`, {
+    const responce = await fetch(`${apiUrl}/addCartDecreaseQuantity/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -37,7 +37,7 @@ export const addCartDecreaseQuantity = createAsyncThunk("addCartDecreaseQuantity
 
 
 export const addWishlist = createAsyncThunk("addWishlist", async (data, { rejectWithValue }) => {
-    const responce = await fetch(`https://www.backend.decasys.in/api/v1/addWishlist/`, {
+    const responce = await fetch(`${apiUrl}/addWishlist/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -54,7 +54,7 @@ export const addWishlist = createAsyncThunk("addWishlist", async (data, { reject
 ///update agent api 
 export const EditAgentDetails = createAsyncThunk("EditAgentDetails", async (data, { rejectWithValue }) => {
 
-    const responce = await fetch(`https://www.backend.decasys.in/api/v1/EditAgentDetails/${data._id}`, {
+    const responce = await fetch(`${apiUrl}/EditAgentDetails/${data._id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export const EditAgentDetails = createAsyncThunk("EditAgentDetails", async (data
 })
 
 export const getAllCartBySessionId = createAsyncThunk("getAllCartBySessionId", async (data, { rejectWithValue }) => {
-    const responce = await fetch(`https://www.backend.decasys.in/api/v1/getAllCartBySessionId`, {
+    const responce = await fetch(`${apiUrl}/getAllCartBySessionId`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -87,7 +87,7 @@ export const getAllCartBySessionId = createAsyncThunk("getAllCartBySessionId", a
 })
 
 export const getallWishlist = createAsyncThunk("getallWishlist", async (data, { rejectWithValue }) => {
-    const responce = await fetch(`https://www.backend.decasys.in/api/v1/getAllwishlistByUserId`, {
+    const responce = await fetch(`${apiUrl}/getAllwishlistByUserId`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -105,7 +105,7 @@ export const getallWishlist = createAsyncThunk("getallWishlist", async (data, { 
 
 export const removecartbycartid = createAsyncThunk("removecartbycartid", async (_id, { rejectWithValue }) => {
 
-    const responce = await fetch(`https://www.backend.decasys.in/api/v1/removecartbycartid/${_id}`, {
+    const responce = await fetch(`${apiUrl}/removecartbycartid/${_id}`, {
         method: "DELETE",
     })
 
@@ -121,7 +121,7 @@ export const removecartbycartid = createAsyncThunk("removecartbycartid", async (
 
 export const removewishlistbywishlistid = createAsyncThunk("removewishlistbywishlistid", async (_id, { rejectWithValue }) => {
 
-    const responce = await fetch(`https://www.backend.decasys.in/api/v1/removewishlistbycartid/${_id}`, {
+    const responce = await fetch(`${apiUrl}/removewishlistbycartid/${_id}`, {
         method: "DELETE",
     })
 
@@ -213,16 +213,16 @@ export const CartSource = createSlice({
         },
         [addWishlist.fulfilled]: (state, action) => {
             state.loading = false;
-            if (action.payload.wishlist) { 
+            if (action.payload.wishlist) {
                 const { _id } = action.payload.wishlist;
-              
+
                 if (_id) {
                     const selectedData = state?.Wishlist?.find((ele) => ele?._id === _id);
                     if (!selectedData) {
                         state.Wishlist.push(action.payload.wishlist);
                     }
-               }
-           }
+                }
+            }
         },
         [addWishlist.rejected]: (state, action) => {
             state.loading = false;
@@ -239,7 +239,7 @@ export const CartSource = createSlice({
                 state.Wishlist = state.Wishlist.filter((ele) => ele._id !== _id);
             }
         },
-       
+
 
 
 

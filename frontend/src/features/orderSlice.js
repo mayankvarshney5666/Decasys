@@ -3,7 +3,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 
 export const GetOrderBySessionIdOrUserId = createAsyncThunk("GetOrderBySessionIdOrUserId", async (data, { rejectWithValue }) => {
-    const responce = await fetch(`https://www.backend.decasys.in/api/v1/GetOrderBySessionIdOrUserId`, {
+    const responce = await fetch(`${apiUrl}/GetOrderBySessionIdOrUserId`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -41,7 +41,7 @@ export const OrderSource = createSlice({
             state.loading = false;
             state.Order = action.payload;
         },
-    }, 
+    },
 })
 
 export default OrderSource.reducer;
