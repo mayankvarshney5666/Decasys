@@ -47,7 +47,7 @@ export default function Header() {
     const session_id = localStorage.getItem('session_id');
     const session_id1 = localStorage.getItem('user_id');
     // const data = { session_id: session_id ,user_id: session_id1};
-    const data = { user_id: session_id1};
+    const data = { user_id: session_id1 };
     const data1 = { user_id: session_id1 };
     const checkToken = async () => {
       await Authentication();
@@ -137,8 +137,8 @@ export default function Header() {
                     <div>
                       <div className="timer-notification">
                         <h6>
-                          <Link to='/categorylist' className="btn-t-1 text-black">
-                              Free shipping on all orders till 31st of July.
+                          <Link to='/brand/664ae09db247e473f517bc5a' className="btn-t-1 text-black">
+                            Free shipping on all orders till 31<sup>st</sup> of July.
                           </Link>
                         </h6>
                       </div>
@@ -155,8 +155,8 @@ export default function Header() {
                     <div>
                       <div className="timer-notification">
                         <h6>
-                          <Link to='/categorylist' className="btn-t-2 text-black">
-                          Orders shipped within 5-7 working days.
+                          <Link to='/brand/65e06a4b299335f107e67b14' className="btn-t-2 text-black">
+                            Orders shipped within 5-7 working days.
                           </Link>
 
                         </h6>
@@ -194,8 +194,8 @@ export default function Header() {
               <div className="col-12 col-xxl-12">
                 <div className="header-offer">
                   <h6>
-                    <Link to='/categorylist'>
-                    Free shipping on all orders till 31st of July.
+                    <Link to='/brand/65e06a4b299335f107e67b14'>
+                      Free shipping on all orders till 31<sup>st</sup> of July.
                     </Link>
                   </h6>
                 </div>
@@ -219,9 +219,9 @@ export default function Header() {
                       <i className="fa-solid fa-bars" />
                     </span>
                   </button>
-                  <Link to="/" className="web-logo nav-logo" onClick={() => { 
-                        window.scrollTo(0, 0);
-                    }}>
+                  <Link to="/" className="web-logo nav-logo" onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}>
                     <img
                       src="https://www.decasys.in/images/logo/1.png"
                       className="img-fluid blur-up lazyload"
@@ -434,7 +434,7 @@ export default function Header() {
                         </Link>
                       </li></>) : (<><li className="right-side">
                         <Link
-                          to="/signin"
+                          to="/Wishlist"
                           className="btn p-0 position-relative header-wishlist"
                         >
                           <i class="fa fa-heart-o" aria-hidden="true"></i>

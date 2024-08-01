@@ -8,7 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const toastConfig = {
-  autoClose: 2000, // Set the default duration to 2 seconds (2000 milliseconds)
+  autoClose: 1000, // Set the default duration to 2 seconds (2000 milliseconds)
 };
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
