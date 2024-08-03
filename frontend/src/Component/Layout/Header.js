@@ -138,7 +138,7 @@ export default function Header() {
                       <div className="timer-notification">
                         <h6>
                           <Link to='/brand/664ae09db247e473f517bc5a' className="btn-t-1 text-black">
-                            Free shipping on all orders
+                            Free Shipping on All Orders.
                           </Link>
                         </h6>
                       </div>
@@ -195,7 +195,7 @@ export default function Header() {
                 <div className="header-offer">
                   <h6>
                     <Link to='/brand/65e06a4b299335f107e67b14'>
-                      Free shipping on all orders till 31<sup>st</sup> of July.
+                      Free Shipping on All Orders.
                     </Link>
                   </h6>
                 </div>
