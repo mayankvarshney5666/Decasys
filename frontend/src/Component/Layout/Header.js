@@ -138,7 +138,7 @@ export default function Header() {
                       <div className="timer-notification">
                         <h6>
                           <Link to='/brand/664ae09db247e473f517bc5a' className="btn-t-1 text-black">
-                            Free shipping on all orders till 31<sup>st</sup> of July.
+                            Free shipping on all orders
                           </Link>
                         </h6>
                       </div>

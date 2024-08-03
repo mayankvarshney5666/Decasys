@@ -8,7 +8,7 @@ const bcrypt = require('bcryptjs');
 const useragent = require('express-useragent');
 const { messaging } = require("firebase-admin");
 const nodemailer = require('nodemailer');
-const { generateMessage1 } = require('./messageGenerator'); 
+const { generateMessage1 } = require('./messageGenerator');
 // const transporter = nodemailer.createTransport({
 //   host: 'smtp.ethereal.email',
 //   port: 587,
@@ -22,8 +22,11 @@ const { generateMessage1 } = require('./messageGenerator');
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'contact@decasys.in', 
-    pass: 'vsks gpzi uhjc ilnx'    // Your Gmail password or app password if 2FA is enabled
+    user: 'contact@decasys.in',
+    pass: 'AyanaS@2517'
+    // pass: 'vsks gpzi uhjc ilnx'    // Your Gmail password or app password if 2FA is enabled
+    // user: 'mayankvarshney56666@gmail.com',
+    // pass: 'mayank@1234'
   }
 });
 
@@ -73,9 +76,9 @@ function generateMessage(otp) {
 ////////  forgotpassword for otp
 exports.forgotPasswordOtp = catchAsyncErrors(async (req, res, next) => {
   const { agent_email } = req.body;
-  
+
   const agent = await Agent.findOne({ agent_email });
-    
+
   if (agent) {
     const otp = generateOtp();
     const message1 = generateMessage(otp);
@@ -86,7 +89,7 @@ exports.forgotPasswordOtp = catchAsyncErrors(async (req, res, next) => {
       subject: 'Your Password Reset OTP',
       html: message1
     };
-   transporter.sendMail(mailOptions, (error, info) => {
+    transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         console.error('Error occurred while sending email:', error);
         return res.status(401).json({
@@ -109,13 +112,13 @@ exports.forgotPasswordOtp = catchAsyncErrors(async (req, res, next) => {
 
 
 //////// send data on email 
-exports.sendData=catchAsyncErrors(async (req,res,next)=>{
-  const { firstname,lastname,email,phone,message } = req.body;
-  const message1 = generateMessage1(firstname,lastname,email,phone,message);
+exports.sendData = catchAsyncErrors(async (req, res, next) => {
+  const { firstname, lastname, email, phone, message } = req.body;
+  const message1 = generateMessage1(firstname, lastname, email, phone, message);
   const mailOptions = {
     from: email,
     to: 'contact@decasys.in',
-    subject: 'Enquery',
+    subject: 'Enquiry',
     html: message1
   };
   transporter.sendMail(mailOptions, (error, info) => {
@@ -343,10 +346,10 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
     { agent_password: hashedPassword },
     { new: true, runValidators: true, useFindAndModify: false }
   );
-      
+
   res.status(200).json({
     success: true,
-    message:"Password Update Successfully",
+    message: "Password Update Successfully",
     updateAgent,
   });
 
@@ -354,7 +357,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
 
 exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
   const { agent_email, oldpass, newpass } = req.body;
- 
+
   if (!agent_email || !oldpass || !newpass) {
     return next(new ErrorHander("Please provide all required fields: agent_email, oldpass, newpass", 400));
   }
@@ -362,7 +365,7 @@ exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
   if (!agent) {
     return next(new ErrorHander("Email Id is not Registered", 400));
   }
-  
+
   const isPasswordMatched = await bcrypt.compare(oldpass, agent.agent_password);
   if (!isPasswordMatched) {
     return next(new ErrorHander("Old password is incorrect", 400));
@@ -374,7 +377,7 @@ exports.resetPassword = catchAsyncErrors(async (req, res, next) => {
     { agent_password: hashedPassword },
     { new: true, runValidators: true, useFindAndModify: false }
   );
-  
+
 
   res.status(200).json({
     success: true,

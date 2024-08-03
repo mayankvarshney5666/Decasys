@@ -49,7 +49,7 @@ export default function Footer() {
                       />
                     </div>
                     <div className="service-detail">
-                      <h5>Free shipping on all orders till 31st of July</h5>
+                      <h5>Free Shipping on All Orders</h5>
                     </div>
                   </div>
                   <div className="service-box">
@@ -61,7 +61,7 @@ export default function Footer() {
                       />
                     </div>
                     <div className="service-detail">
-                      <h5>All deliveries will be done in 5-7 business days</h5>
+                      <h5>All deliveries will be done in 4 - 6 business days</h5>
                     </div>
                   </div>
                   <div className="service-box">
@@ -73,7 +73,7 @@ export default function Footer() {
                       />
                     </div>
                     <div className="service-detail">
-                      <h5>Best Price On The Market</h5>
+                      <h5>Best Price In The Market</h5>
                     </div>
                   </div>
                 </div>
