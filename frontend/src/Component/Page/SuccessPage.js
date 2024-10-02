@@ -3,15 +3,27 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { useSearchParams } from 'react-router-dom'
 
-
-
 const cardClass = "bg-zinc-50 p-8 rounded-lg mt-4";
 const titleClass = "text-2xl font-bold mb-2";
 const textClass = "text-lg mb-4";
 const imgClass = "mx-auto mb-4";
 
-
 export default function SuccessPage() {
+  // < !--Google tag(gtag.js) event-- >
+  // <script>
+  // gtag('event', 'conversion_event_purchase', {
+  // <event_parameters>
+  // });
+  // </script>
+
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('event', 'conversion_event_purchase', {
+        // <event_parameters>
+      });
+    }
+  }, []);
+
   const seachQuery = useSearchParams()[0]
   const apiUrl = process.env.REACT_APP_API_URL;
   const referenceNum = seachQuery.get("reference");
